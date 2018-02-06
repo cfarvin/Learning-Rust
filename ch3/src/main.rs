@@ -45,11 +45,19 @@ fn main() {
     // COMPOUND DATA TYPES
     //   Two primitive compound data types: tuples && arrays
     {
+        // TUPLES: many types, dynamic length
         let tuple: (i32, f64, u8) = (500, 6.4, 1); // 
         let tuple2 = (2.0, 2, "two");              // type specification is optional
         let (x, y, z) = tuple;
-        println!("The value of y is: {}", y);
-        println!("The value of the third index of tuple2 is: {}", tuple2.2);
+        println!("The value of y is: {}", y);                                //
+        println!("The value of the third index of tuple2 is: {}", tuple2.2); // two ways to access tuple members
     }
-    
+
+    {
+        // ARRAYS: same type, fixed length
+        // Arrays are allocated on the stack, not the heap
+        let a = [1, 2, 3, 4, 5];
+        let a_first = a[0];
+        let a_second = a[1];
+    }
 }
